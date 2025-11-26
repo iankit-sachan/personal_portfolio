@@ -50,7 +50,7 @@ export default function Projects() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -64,9 +64,9 @@ export default function Projects() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
                 </div>
 
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">{project.title}</h3>
+                <div className="p-4 sm:p-6">
+                  <div className="flex items-start justify-between flex-wrap gap-2 mb-3">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">{project.title}</h3>
                     {project.year && (
                       <div className="flex items-center gap-1 text-slate-400 text-sm">
                         <Calendar size={14} />
@@ -75,7 +75,7 @@ export default function Projects() {
                     )}
                   </div>
 
-                  <p className="text-slate-300 mb-4 leading-relaxed">{project.description}</p>
+                  <p className="text-sm sm:text-base text-slate-300 mb-4 leading-relaxed">{project.description}</p>
 
                   {project.detailed_description && project.detailed_description.length > 0 && (
                     <ul className="space-y-2 mb-4">
@@ -88,9 +88,9 @@ export default function Projects() {
                     </ul>
                   )}
 
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-6">
                     {project.technologies?.map((tech, idx) => (
-                      <span key={idx} className="px-3 py-1 text-xs font-medium rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                      <span key={idx} className="px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
                         {tech}
                       </span>
                     ))}
@@ -101,7 +101,7 @@ export default function Projects() {
                       href={project.project_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105"
+                      className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 text-sm sm:text-base bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105"
                     >
                       <ExternalLink size={16} />
                       <span>View Project</span>

@@ -87,7 +87,7 @@ export default function Hero() {
 
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-100 to-slate-300">
               {displayName}
@@ -98,32 +98,32 @@ export default function Hero() {
             variants={itemVariants}
             className="mb-8"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-blue-400 to-emerald-500 leading-relaxed">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-blue-400 to-emerald-500 leading-relaxed">
               {displayTitle}
             </h2>
           </motion.div>
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-3xl"
+            className="text-base sm:text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-3xl"
           >
             Helping brands scale on LinkedIn, Instagram & Meta through strategic content creation and data-driven growth strategies
           </motion.p>
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap gap-4 mb-12"
+            className="flex flex-wrap gap-3 sm:gap-4 mb-12"
           >
             <button
               onClick={() => scrollToSection('projects')}
-              className="group px-8 py-4 bg-gradient-to-r from-emerald-600 to-emerald-500 text-white rounded-xl font-semibold shadow-xl shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5"
+              className="group px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-gradient-to-r from-emerald-600 to-emerald-500 text-white rounded-xl font-semibold shadow-xl shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5"
             >
               View My Work
               <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="px-8 py-4 bg-slate-800/50 backdrop-blur-sm text-white rounded-xl font-semibold border border-slate-700 hover:bg-slate-800 hover:border-slate-600 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5"
+              className="px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-slate-800/50 backdrop-blur-sm text-white rounded-xl font-semibold border border-slate-700 hover:bg-slate-800 hover:border-slate-600 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5"
             >
               Get in Touch
             </button>
@@ -131,7 +131,7 @@ export default function Hero() {
 
           <motion.div
             variants={itemVariants}
-            className="flex gap-4"
+            className="flex flex-wrap gap-3 sm:gap-4"
           >
             <a
               href={profile?.github_url || 'https://github.com/iankit-sachan'}

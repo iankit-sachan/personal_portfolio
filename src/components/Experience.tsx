@@ -56,15 +56,15 @@ export default function Experience() {
               >
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 ring-4 ring-slate-800"></div>
 
-                <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-colors group">
+                <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 hover:border-blue-500/30 transition-colors group">
                   <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
                     <div>
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center">
-                          <Briefcase size={24} className="text-blue-400" />
+                      <div className="flex items-center gap-2 sm:gap-3 mb-2">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center">
+                          <Briefcase size={20} className="text-blue-400 sm:w-6 sm:h-6" />
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">{exp.title}</h3>
+                          <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-blue-400 transition-colors">{exp.title}</h3>
                           <p className="text-blue-400 font-medium">{exp.company}</p>
                         </div>
                       </div>
@@ -90,7 +90,7 @@ export default function Experience() {
                     </div>
                   )}
 
-                  {exp.description && <p className="text-slate-300 mb-4">{exp.description}</p>}
+                  {exp.description && <p className="text-sm sm:text-base text-slate-300 mb-4">{exp.description}</p>}
 
                   {exp.responsibilities && exp.responsibilities.length > 0 && (
                     <ul className="space-y-2">

@@ -43,55 +43,55 @@ export default function Contact() {
           className="max-w-5xl mx-auto"
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Get In Touch</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Get In Touch</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-400 mx-auto rounded-full"></div>
-            <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+            <p className="text-slate-400 text-sm sm:text-base mt-4 max-w-2xl mx-auto">
               I'm always open to discussing new opportunities, projects, or just having a chat about technology
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <motion.div variants={itemVariants} className="space-y-6">
-              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+            <motion.div variants={itemVariants} className="space-y-4 sm:space-y-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Contact Information</h3>
 
               <a
                 href={`mailto:${profile?.email}`}
-                className="group flex items-start gap-4 p-4 bg-slate-900/50 backdrop-blur-sm rounded-xl border border-white/10 hover:border-blue-500/30 transition-all duration-300"
+                className="group flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-slate-900/50 backdrop-blur-sm rounded-xl border border-white/10 hover:border-blue-500/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center flex-shrink-0">
-                  <Mail size={24} className="text-blue-400" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center flex-shrink-0">
+                  <Mail size={20} className="text-blue-400 sm:w-6 sm:h-6" />
                 </div>
-                <div>
-                  <p className="text-slate-400 text-sm mb-1">Email</p>
-                  <p className="text-white font-medium group-hover:text-blue-400 transition-colors">{profile?.email}</p>
+                <div className="min-w-0">
+                  <p className="text-slate-400 text-xs sm:text-sm mb-1">Email</p>
+                  <p className="text-white font-medium text-sm sm:text-base group-hover:text-blue-400 transition-colors break-all">{profile?.email}</p>
                 </div>
               </a>
 
               <a
                 href={`tel:${profile?.phone}`}
-                className="group flex items-start gap-4 p-4 bg-slate-900/50 backdrop-blur-sm rounded-xl border border-white/10 hover:border-blue-500/30 transition-all duration-300"
+                className="group flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-slate-900/50 backdrop-blur-sm rounded-xl border border-white/10 hover:border-blue-500/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center flex-shrink-0">
-                  <Phone size={24} className="text-blue-400" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center flex-shrink-0">
+                  <Phone size={20} className="text-blue-400 sm:w-6 sm:h-6" />
                 </div>
-                <div>
-                  <p className="text-slate-400 text-sm mb-1">Phone</p>
-                  <p className="text-white font-medium group-hover:text-blue-400 transition-colors">{profile?.phone}</p>
+                <div className="min-w-0">
+                  <p className="text-slate-400 text-xs sm:text-sm mb-1">Phone</p>
+                  <p className="text-white font-medium text-sm sm:text-base group-hover:text-blue-400 transition-colors">{profile?.phone}</p>
                 </div>
               </a>
 
-              <div className="flex items-start gap-4 p-4 bg-slate-900/50 backdrop-blur-sm rounded-xl border border-white/10">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center flex-shrink-0">
-                  <MapPin size={24} className="text-blue-400" />
+              <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-slate-900/50 backdrop-blur-sm rounded-xl border border-white/10">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center flex-shrink-0">
+                  <MapPin size={20} className="text-blue-400 sm:w-6 sm:h-6" />
                 </div>
-                <div>
-                  <p className="text-slate-400 text-sm mb-1">Location</p>
-                  <p className="text-white font-medium">{profile?.location}</p>
+                <div className="min-w-0">
+                  <p className="text-slate-400 text-xs sm:text-sm mb-1">Location</p>
+                  <p className="text-white font-medium text-sm sm:text-base">{profile?.location}</p>
                 </div>
               </div>
 
-              <div className="pt-6">
-                <h4 className="text-lg font-bold text-white mb-4">Social Links</h4>
+              <div className="pt-4 sm:pt-6">
+                <h4 className="text-base sm:text-lg font-bold text-white mb-4">Social Links</h4>
                 <div className="flex gap-4">
                   <a
                     href={profile?.github_url}
@@ -123,7 +123,7 @@ export default function Contact() {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Send a Message</h3>
 
               <form
                 className="space-y-4"
@@ -176,9 +176,9 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3 text-sm sm:text-base bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500/50"
                 >
-                  <Send size={18} />
+                  <Send size={16} className="sm:w-[18px] sm:h-[18px]" />
                   <span>Send Message</span>
                 </button>
               </form>

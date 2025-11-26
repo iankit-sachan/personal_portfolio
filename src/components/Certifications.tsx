@@ -50,22 +50,22 @@ export default function Certifications() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {certifications.map((cert) => (
               <motion.div
                 key={cert.id}
                 variants={itemVariants}
-                className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:scale-[1.02]"
+                className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:scale-[1.02]"
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 bg-opacity-20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Award size={32} className="text-white" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 bg-opacity-20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Award size={24} className="text-white sm:w-8 sm:h-8" />
                 </div>
 
-                <h3 className="text-lg font-bold text-white mb-2 line-clamp-2 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-2 line-clamp-2 group-hover:text-blue-400 transition-colors">
                   {cert.title}
                 </h3>
 
-                <p className="text-blue-400 font-medium text-sm mb-3">{cert.issuing_organization}</p>
+                <p className="text-blue-400 font-medium text-xs sm:text-sm mb-3">{cert.issuing_organization}</p>
 
                 <div className="flex items-center gap-2 text-slate-400 text-sm">
                   <Calendar size={14} />

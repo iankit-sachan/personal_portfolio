@@ -57,7 +57,7 @@ export default function Skills() {
             <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-400 mx-auto rounded-full"></div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {Object.entries(groupedSkills).map(([category, skills]) => {
               const Icon = categoryIcons[category] || Code2;
 
@@ -65,19 +65,19 @@ export default function Skills() {
                 <motion.div
                   key={category}
                   variants={itemVariants}
-                  className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-colors"
+                  className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 hover:border-blue-500/30 transition-colors"
                 >
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center">
-                      <Icon size={24} className="text-blue-400" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center">
+                      <Icon size={20} className="text-blue-400 sm:w-6 sm:h-6" />
                     </div>
-                    <h3 className="text-xl font-bold text-white">{category}</h3>
+                    <h3 className="text-base sm:text-xl font-bold text-white">{category}</h3>
                   </div>
 
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2 sm:gap-3">
                     {skills.map((skill) => (
-                      <div key={skill.id} className="px-4 py-2 rounded-full bg-blue-500/10 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105">
-                        <span className="text-white font-medium text-sm">{skill.name}</span>
+                      <div key={skill.id} className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-blue-500/10 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105">
+                        <span className="text-white font-medium text-xs sm:text-sm">{skill.name}</span>
                       </div>
                     ))}
                   </div>

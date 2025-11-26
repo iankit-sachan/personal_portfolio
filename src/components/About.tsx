@@ -48,18 +48,18 @@ export default function About() {
             <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-emerald-400 mx-auto rounded-full"></div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start mb-16">
             <motion.div variants={itemVariants} className="space-y-6">
-              <h3 className="text-2xl font-bold text-white mb-4">Hello! I'm {profile?.full_name}</h3>
-              <p className="text-slate-300 leading-relaxed text-lg">{profile?.bio}</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">Hello! I'm {profile?.full_name}</h3>
+              <p className="text-slate-300 leading-relaxed text-base sm:text-lg">{profile?.bio}</p>
               <div className="flex items-center gap-2 text-slate-400">
                 <MapPin size={20} className="text-emerald-400" />
                 <span>{profile?.location}</span>
               </div>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="relative">
-              <div className="aspect-[3/4] md:aspect-square rounded-2xl bg-gradient-to-br from-emerald-600/20 to-slate-800/40 backdrop-blur-sm border border-white/10 overflow-hidden shadow-2xl shadow-emerald-500/5">
+            <motion.div variants={itemVariants} className="relative order-first md:order-last">
+              <div className="aspect-square rounded-2xl bg-gradient-to-br from-emerald-600/20 to-slate-800/40 backdrop-blur-sm border border-white/10 overflow-hidden shadow-2xl shadow-emerald-500/5">
                 {profile?.profile_image_url ? (
                   <img
                     src={profile.profile_image_url}
@@ -77,7 +77,7 @@ export default function About() {
           </div>
 
           <motion.div variants={itemVariants}>
-            <h3 className="text-3xl font-bold text-white mb-8 text-center">Education</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center">Education</h3>
             <div className="space-y-8">
               {education.map((edu) => (
                 <motion.div
@@ -87,10 +87,10 @@ export default function About() {
                 >
                   <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-slate-900"></div>
 
-                  <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-emerald-500/30 transition-colors">
+                  <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 hover:border-emerald-500/30 transition-colors">
                     <div className="flex items-start justify-between flex-wrap gap-4 mb-3">
                       <div>
-                        <h4 className="text-xl font-bold text-white mb-2">{edu.degree}</h4>
+                        <h4 className="text-lg sm:text-xl font-bold text-white mb-2">{edu.degree}</h4>
                         <p className="text-emerald-400 font-medium mb-1">{edu.institution}</p>
                         {edu.university && <p className="text-slate-400 text-sm">{edu.university}</p>}
                       </div>
